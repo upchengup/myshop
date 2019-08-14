@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md navbar-light bg-danger shadow-sm ">
+<nav class="navbar navbar-expand-md navbar-dark shadow-sm" style="background-color: #d83208;">
     <div class="container">
         <a class="navbar-brand" href="{{ url('/') }}">
             {{ config('app.name', 'Laravel') }}
@@ -27,6 +27,11 @@
                 </li>
                 @endif
                 @else
+                @section('my_menu')
+                <li class="nav-item">
+                    <a class="nav-link" href="/">回首頁</a>
+                </li>
+                @show
                 <li class="nav-item dropdown">
                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button"
                         data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
